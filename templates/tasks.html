@@ -6,22 +6,21 @@
      {% for task in tasks %}
         {{ task.name }}<br>
         {{ task.meal }}<br>
-    {% endfor %}
-
-
-  <ul class="collapsible">
-        <li>
-            <div class="collapsible-header white-text red accent-1 text-shadow"><i class="fas fa-caret-down"></i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header white-text red accent-1 text-shadow"><i class="fas fa-caret-down"></i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header white-text red accent-1 text-shadow"><i class="fas fa-caret-down"></i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-    </ul>
+    
+<div class="row">
+<div class="col-sm">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ task.name }}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="https://www.canva.com/design/DAEHHgJAscU/HDayZo9THy5ju71KDSIH_A/view?utm_content=DAEHHgJAscU&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" class="btn btn-primary">{{ task.meal }}</a>
+  </div>
+</div>
+  </div>
+  <div class="col-sm">col-sm</div>
+  <div class="col-sm">col-sm</div>
+  {% endfor %}
+</div>
 
 {% endblock %}
