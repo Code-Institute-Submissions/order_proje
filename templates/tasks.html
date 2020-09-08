@@ -8,18 +8,13 @@
         {{ task.meal }}<br>
     
 <div class="row">
-<div class="col-sm">
-  <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{ task.name }}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://www.canva.com/design/DAEHHgJAscU/HDayZo9THy5ju71KDSIH_A/view?utm_content=DAEHHgJAscU&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" class="btn btn-primary">{{ task.meal }}</a>
-  </div>
+<div class="col s12 m8 offset-m2">
+<ul class="collection with-header red accent-1">
+        <li class="collection-header"><h4>Food Name and Recipe</h4></li>
+        <li class="collection-item"><div><strong>{{ task.name }}</strong><a href="https://www.canva.com/design/DAEHNkdRCBc/waQqY8Mug5-o28ZGEH4ROg/view?utm_content=DAEHNkdRCBc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="secondary-content"><i class="material-icons">{{ task.meal }}</strong></i></a></div></li>
+</ul>
 </div>
-  </div>
-  <div class="col-sm">col-sm</div>
-  <div class="col-sm">col-sm</div>
+
   {% endfor %}
 </div>
 
