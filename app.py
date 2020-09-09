@@ -85,7 +85,6 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-
     if session["user"]:
         return render_template("profile.html", username=username)
 
@@ -100,9 +99,19 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe")
-def add_recipe():
-    return render_template("add_recipe.html")
+@app.route("/add_new", methods=["GET", "POST"])
+def add_new():
+    if request.method == "POST":
+        task = {
+            "category_name": request.form.get("category_name"),
+            "task_name": request.form.get("task_name"),
+            "task_description": request.form.get("task_description"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(task)
+        flash("Task Successfully Added")
+    return render_template("add_new.html")
+    return redirect(url_for("get_tasks"))
 
 
 if __name__ == "__main__":

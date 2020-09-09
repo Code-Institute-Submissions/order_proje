@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+    <h3 class="center-align">Add New</h3>
+
+    <div class="row">
+        <form class="col s12" method="POST" action="{{ url_for('add_new') }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-circle prefix"></i>
+                    <input id="category_name" name="category_name" minlength="5" maxlength="50" type="text" class="validate" required>
+                    <label for="category_name">Department</label>
+                </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-circle prefix"></i>
+                    <input id="task_name" name="task_name" minlength="5" maxlength="50" type="text" class="validate" required>
+                    <label for="task_name">Name</label>
+                </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix"></i>
+                    <textarea id="task_description" name="task_description" minlength="5" maxlength="50"class="materialize-textarea" required></textarea>
+                    <label for="task_description">T-shirt size and colour</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large red accent-2">
+                        Add Task <i class="fas fa-plus-square right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+        
+{% endblock %}
