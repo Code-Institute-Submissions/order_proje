@@ -1,29 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
 
-  
-<div class=" accordion ">
-  {% for task in tasks %}
-  <div class="accordion-header col s12 m8 offset-m2 " id="headingOne">
-    <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left fas fa-caret-down col s12 m8 offset-m2 white-text  red accent-1" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 
-         
-            <a href="" class="btn-small pink accent-1">Done</a>
-            <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small pink accent-1">Edit</a>
-        
-          {{ task.category_name }}
-        </button>
-      </h2>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="accordin-body">
-        <strong>{{ task.task_name }}</strong>
-        <p>{{ task.task_description }}</p>
-        <p><em>by: {{ task.created_by }}</em></p>
-      </div>
-    </div>
-    
-    {% endfor%}
-  </div>
-  {% endblock %} 
+<div class="container">
+{% for task in tasks %}
+  <div class="row col s12 m6 offset-m2">
+  <a href="#" data-toggle="popover" title="{{ task.category_name }}" data-content="{{ task.task_description }}">
+  <strong>{{ task.task_name }}</strong></a>
+</div>
+    <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small pink accent-1">Edit</a>
+    <a href="" class="btn-small pink accent-1">Done</a>
+
+</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+{% endfor%}
+</body>
+</html>
+
+
+
+
+{% endblock %} 

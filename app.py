@@ -18,7 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 @app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.tasks.find())
@@ -117,6 +117,7 @@ def add_new():
 @app.route("/edit_task/<task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_task.html", task=task, categories=categories)
     
