@@ -19,9 +19,10 @@
   <a href="#" data-toggle="popover" title="{{ task.category_name }}" data-content="{{ task.task_description }}">
   <strong>{{ task.task_name }}</strong></a>
 </div>
+{% if session.user|lower == task.created_by|lower %}
     <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small pink accent-1">Edit</a>
     <a href="" class="btn-small pink accent-1">Done</a>
-
+{% endif %}
 </div>
 <script>
 $(document).ready(function(){
