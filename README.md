@@ -1,5 +1,6 @@
 
-   My Project ia about a marathon 2020 T-shirt order. The employees in different departments in the company are required to register and fill in their departments names, T-shirt size and colours to order.   
+   My Project ia about a marathon 2020 T-shirt order. The employees in different departments in the company are required to register and fill in their departments names, T-shirt size and colours to order.  
+   The application is live here [http://order-proje.herokuapp.com/get_tasks](http://order-proje.herokuapp.com/get_tasks).
    ## UX
    This project is for all the employees in the company who would like to participate in the marathon.
    - As a user I would like to have a navigation bar where i can navigate though the whole website.
@@ -62,7 +63,7 @@
    ##### Mobile responsive
    - Each page was checked through the live preview by inspecting it in dev tools and choosing different screen sizes.
    ## Bugs/Problem Encountered
-   - My edit button was not working as supposed.
+   - My delete button was not working as supposed.
    ##### Deploying my project
    - I used Gitpod workspace and added content with the following commands to push to GitHub;
    1. Git add "file name".
@@ -72,7 +73,7 @@
    - In the heroku dashboard for the application, I clicked on "deploy" > "GitHub" 
    - Then I clicked on Enable Automatic Deployment button.
    - In the heroku dashboard for the application, I clicked on "Settings" > "Reveal Config Vars" and set the config vars.
-   - In the heroku dashboard for the application, I clicked on "deploy" > "Deploy Branch" Then "View"   
+   - In the heroku dashboard for the application, I clicked on "deploy" > "Deploy Branch" Then "View"
    ## Credits
    ###### Photos
    - The photo were obtained from [https://www.pexels.com](https://www.pexels.com).
