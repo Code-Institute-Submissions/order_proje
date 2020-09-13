@@ -1,6 +1,6 @@
 
    My Project ia about a marathon 2020 T-shirt order. The employees in different departments in the company are required to register and fill in their departments names, T-shirt size and colours to order.  
-   The application is live here [http://order-proje.herokuapp.com/get_tasks](http://order-proje.herokuapp.com/get_tasks).
+   The application is live here [https://order-proje.herokuapp.com/](https://order-proje.herokuapp.com/).
    ## UX
    This project is for all the employees in the company who would like to participate in the marathon.
    - As a user I would like to have a navigation bar where i can navigate though the whole website.
