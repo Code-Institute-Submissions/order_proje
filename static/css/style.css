@@ -4,11 +4,32 @@
 flashes  {
     line-height: 2;
 }
+.navbar navbar-expand-lg navbar-light {
+    background-color: #ff5252;
+}
 .btn-small {
     margin: 5px;
 }
 
-.collapsible-header .col strong {
-    margin: 5px;
-    line-height: 42px;
+body {
+  background: url("https://cdn.pixabay.com/photo/2018/04/06/21/52/wood-3297117__340.jpg");
+}
+
+
+.navbar li a .navbar .navbar-brand {
+    color: white;
+}
+.navbar-brand .nav-link .nav-item {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-brand {
+    color: #ffffff;
+}
+.collapse navbar-collapse {
+    color: #ffffff;
+}
+
+.navbar {
+    font-weight: bold;
 }
